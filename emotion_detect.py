@@ -34,7 +34,7 @@ while True:
         emotion = EMOTIONS[np.argmax(preds)]
 
         text_x = fX + fW // 2
-        text_y = fY - 10  # 위로 조금 올려서 텍스트가 얼굴 상단 중앙에 위치하도록 조정
+        text_y = fY - 10
 
         cv2.rectangle(frameClone, (fX, fY), (fX + fW, fY + fH), (128, 128, 128), 5)
         cv2.putText(frameClone, emotion, (text_x, text_y), cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 0, 0), 5)
